@@ -1,26 +1,38 @@
-$(document).ready
-var phrase = ["B","e","l","i","e","v","e"," ","y","o ","u"," ","c","a","n","" "","a","n","d"," ","y","o","u","r","e"," ","h","a","l","f","w","a","y"," ","t","h","e","r","e","."," ","T","h","e","o","d","o","r","e"," ","R","o","o","s","e","v","e","l","t"];
-for(var index = 0; index< phrase.length; index += 1 ) {
+$(document).ready(function(){
+  $("form#survey").submit(function(event) {
+    event.preventDefault();
+    
+    
+    
+    $("#getHelp").show();
+    $("input:checkbox[name=stress-symptoms]:checked").each(function() {
+      var symptoms = $(this).val();
+      $()
+  }
+  });
+});
 
-  if(phrase[index] === "a") {
-    phrase[index] = "-";  
-  }
-  else if(phrase[index] === "e"){
-    phrase[index] ="-";
-  
-  }
-  else if(phrase[index] === "i") {
-    phrase[index] = "-";
-  }
-  else if(phrase[index] === "o") {
-    phrase[index] = "-";
-  }
-  else if(phrase[index] === "u") {
-    phrase[index] = "-";
-  }
 
-  else {
-    alert(phrase);
-  }
 
-}
+
+
+
+
+
+
+// $(document).ready(function(){
+//   $("form#transportation_survey").submit(function(event){
+//     event.preventDefault();
+//     $("#work-responses").show();
+//     $("input:checkbox[name=work-transportation]:checked").each(function(){
+//       var workTransportationMode = $(this).val();
+//       $('#work-responses').append(workTransportationMode + "<br>");
+//     });
+//     $("#fun-responses").show();
+//     $("input:checkbox[name=fun-transportation]:checked").each(function(){
+//       var funTransportationMode = $(this).val();
+//       $('#fun-responses').append(funTransportationMode + "<br>");
+//     });
+//     $('#transportation_survey').hide();
+//   });
+// });
